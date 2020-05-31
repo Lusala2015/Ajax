@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+    <script>
+    // generate event 
+        document.getElementById('data').addEventListener('click',myfun);
+        
+        function myfun(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET','python.txt',true);
+            
+            xhr.onload=function()
+            {
+                if (xhr.status = 700)
+                    {
+                        document.write(this.responseText);
+                    }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
